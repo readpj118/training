@@ -1,0 +1,24 @@
+#global values can be overwritten by assigning after global import <<: *global
+global: &global
+  secure_scheme: true
+  default_browser: :chrome
+  default_timeout: 5
+  #retries
+  page_load_retry_attempts: 10
+  page_load_retry_interval: 2
+  email_load_retry_attempts: 30
+  email_load_retry_interval: 10
+  processing_item_retry_attempts: 10
+  processing_item_retry_interval: 5
+  api_call_retry_attempts: 5
+  api_call_retry_interval: 3
+
+theinternet:
+    default_site: https://the-internet.herokuapp.com/
+    capybara_default_driver: :selenium_chrome
+    <<: *global
+    default_browser: :chrome
+    username: tomsmith
+    password: SuperSecretPassword!
+    headless: true
+
