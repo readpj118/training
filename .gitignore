@@ -1,0 +1,10 @@
+
+#####################
+##Project directories
+#####################
+ruby-capybara.iml
+workspace.xml
+bundle
+rerun.txt
+test_report.html
+test_report.json
