@@ -8,8 +8,6 @@ global: &global
   page_load_retry_interval: 2
   email_load_retry_attempts: 30
   email_load_retry_interval: 10
-  processing_item_retry_attempts: 10
-  processing_item_retry_interval: 5
   api_call_retry_attempts: 5
   api_call_retry_interval: 3
 
@@ -20,5 +18,5 @@ theinternet:
     default_browser: :chrome
     username: tomsmith
     password: SuperSecretPassword!
-    headless: true
+    headless: false
 
