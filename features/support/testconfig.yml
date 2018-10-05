@@ -20,3 +20,7 @@ theinternet:
     password: SuperSecretPassword!
     headless: false
 
+api:
+    host: https://reqres.in
+    secure_scheme: true
+
