@@ -1,6 +1,7 @@
 @login_page
 Feature: Login Page
 
+  @UI
   Scenario: Login
     Given I visit the login page
     When I login with correct credentials

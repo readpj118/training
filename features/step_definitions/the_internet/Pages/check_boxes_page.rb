@@ -1,4 +1,4 @@
-class CheckBoxesPage
+class CheckBoxesPage < BasePage
   include Capybara::DSL
   attr_reader :checkbox_one_xpath, :checkbox_two_xpath
 
@@ -10,6 +10,7 @@ class CheckBoxesPage
   def click_checkbox_one
     page.find(:xpath, @checkbox_one_xpath).click
   end
+
 
   def click_checkbox_two
     page.find(:xpath, @checkbox_two_xpath).click

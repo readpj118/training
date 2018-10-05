@@ -6,7 +6,15 @@ require_relative 'test_config'
 require 'capybara/cucumber'
 require 'selenium-webdriver'
 
-Before do
+require 'httparty'
+require 'uri'
+require 'net/imap'
+require 'net/http'
+require 'net/https'
+require 'active_support/all'
+
+
+Before('@UI') do
   Capybara.run_server = false
   Capybara.default_driver = TestConfig["capybara_default_driver"]
   Capybara.default_max_wait_time = TestConfig["default_timeout"]
@@ -23,13 +31,13 @@ Before do
   end
 end
 
-After do
+After('@UI') do
   Capybara.current_session.driver.quit
 
 end
 
 
-After do |scenario|
+After('@UI') do |scenario|
   if scenario.failed?
     dir_path = 'features/screenshots/'
     if Dir.exist?(dir_path)
